@@ -61,6 +61,3 @@ class School():
     def show_data(self):
         print(f'Name:{self.name}\nBudget:{self.budget}\nStudents Total:{self.students}\nTeachers Total:{self.teachers}')
     
-
-
-     
