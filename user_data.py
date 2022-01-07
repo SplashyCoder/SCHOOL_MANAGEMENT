@@ -41,7 +41,7 @@ That inherits the functions of the class User
 class Student(User):
     def __init__(self, name, age, code, course, debt):
         super().__init__(self, name, age, code)#line which instance the functions of the super class
-        self.course = course
+        self.course = course    
         self.debt = debt
     #Show the data
     def student_data(self):
