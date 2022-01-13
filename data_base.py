@@ -12,7 +12,6 @@ class data ():
         
         
     def prit(self):
-        print(self.tipeof)
 
         if self.tipeof == "thc":
               

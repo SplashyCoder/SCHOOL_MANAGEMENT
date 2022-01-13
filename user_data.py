@@ -31,7 +31,8 @@ class Professor(User):
     
     #Show the data
     def prof_data(self):
-        print(f'User type: Teacher \n Data:\n{User.show_data}\nCourses:{self.courses}\nSalary:{self.salary}\nProjects:{self.project}')
+        print(f'User type: Teacher \n Data:\n{User.show_data()}')
+        print(f'Courses:{self.courses}\nSalary:{self.salary}\nProjects:{self.project}')
     
     #Show and control the budrget for every project
     def prof_budget(self):
@@ -48,7 +49,7 @@ class Student(User):
         self.debt = debt
     #Show the data
     def student_data(self):
-        print(f'User type: Student \n Data:\n{User.show_data}\nCourse:{self.course}\n=Debt:{self.debt}')
+        print(f'User type: Student \n Data:\n{User.show_data()}\nCourse:{self.course}\n=Debt:{self.debt}')
     
     #show and control the debt of the student
     def student_debt(self):
