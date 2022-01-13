@@ -4,6 +4,8 @@ Using diferent classes  one to show literaly one to the students and one to the 
 '''
 
 #Class to take the principal data and show it
+
+
 class User():
     
     def __init__(self, name, age, code):
@@ -20,19 +22,20 @@ That inherits the functions of the class User
 '''
 class Professor(User):
     #functions to catch the data
-    def __init__(self, name, age, code, courses, project, salary):
+    def __init__(self, name, age, code, courses, project, salary, budget):
         super().__init__(self, name, age, code)#line which instance the functions of the super class
         self.courses = courses
         self.project = project
         self.salary = salary
+        self.budget = budget
     
     #Show the data
     def prof_data(self):
-        print(f'User type: Teacher \n Data:\n{User.show_data}\nCourses:{self.courses}\nSalary:{self.salary}')
+        print(f'User type: Teacher \n Data:\n{User.show_data}\nCourses:{self.courses}\nSalary:{self.salary}\nProjects:{self.project}')
     
-    #show the projects 
-    def projects(self):
-        print(self.project)
+    #Show and control the budrget for every project
+    def prof_budget(self):
+        print(f'Name{self.name}budget{self.budget}')
 
 '''
 Class which catch and show the students data
@@ -46,6 +49,10 @@ class Student(User):
     #Show the data
     def student_data(self):
         print(f'User type: Student \n Data:\n{User.show_data}\nCourse:{self.course}\n=Debt:{self.debt}')
+    
+    #show and control the debt of the student
+    def student_debt(self):
+        print(f'Name{self.name}\nDebt{self.debt}')
 
 '''
 Class which catch and show the school data
@@ -60,4 +67,6 @@ class School():
     
     def show_data(self):
         print(f'Name:{self.name}\nBudget:{self.budget}\nStudents Total:{self.students}\nTeachers Total:{self.teachers}')
-    
+
+college = School('Liceo Campestre Cafam',9999999999999999,['Juan Esteban Cortez Mendez','Esteben Ardila Gonzalez','Laura Stephanie Suarez Garcia'],['Juan Esteban Cortez Mendez','Esteben Ardila Gonzalez','Laura Stephanie Suarez Garcia'])      
+college.show_data()            
